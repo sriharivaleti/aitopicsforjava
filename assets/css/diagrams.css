@@ -1,0 +1,130 @@
+/* ==========================================================================
+   AI for Java Developers - Interactive SVG Diagrams Styling & Animations
+   ========================================================================== */
+
+/* Base SVG styling */
+.ai-diagram-svg {
+  width: 100%;
+  max-width: 880px;
+  height: auto;
+  font-family: var(--font-sans);
+  user-select: none;
+}
+
+/* Nodes & Boxes */
+.diag-node {
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.diag-node:hover {
+  filter: brightness(1.2) drop-shadow(0 0 10px rgba(99, 102, 241, 0.6));
+}
+
+.diag-node-rect {
+  fill: #111827;
+  stroke: #334155;
+  stroke-width: 1.5;
+  rx: 8;
+  ry: 8;
+  transition: all 0.25s ease;
+}
+
+.diag-node:hover .diag-node-rect {
+  stroke: #6366f1;
+  stroke-width: 2;
+}
+
+/* Glowing Accent Rectangles */
+.diag-node-accent-java .diag-node-rect {
+  stroke: #f59e0b;
+  fill: #181410;
+}
+
+.diag-node-accent-spring .diag-node-rect {
+  stroke: #10b981;
+  fill: #0c1a16;
+}
+
+.diag-node-accent-ai .diag-node-rect {
+  stroke: #6366f1;
+  fill: #12132b;
+}
+
+.diag-node-accent-vector .diag-node-rect {
+  stroke: #06b6d4;
+  fill: #081822;
+}
+
+/* Text inside nodes */
+.diag-text-title {
+  fill: #f8fafc;
+  font-size: 13px;
+  font-weight: 700;
+  text-anchor: middle;
+  letter-spacing: -0.01em;
+}
+
+.diag-text-sub {
+  fill: #94a3b8;
+  font-size: 11px;
+  text-anchor: middle;
+}
+
+.diag-text-java {
+  fill: #fbbf24;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  text-anchor: middle;
+}
+
+/* Connecting Paths / Arrows */
+.diag-arrow {
+  stroke: #475569;
+  stroke-width: 1.8;
+  fill: none;
+}
+
+.diag-arrow-active {
+  stroke: #818cf8;
+  stroke-width: 2;
+  stroke-dasharray: 6, 4;
+  animation: dashFlow 20s linear infinite;
+}
+
+@keyframes dashFlow {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+/* Flow Packet Dot Animation */
+.diag-packet {
+  fill: #38bdf8;
+  filter: drop-shadow(0 0 6px #38bdf8);
+}
+
+/* Vector space coordinate axes */
+.axis-line {
+  stroke: #334155;
+  stroke-width: 1.5;
+}
+
+.axis-label {
+  fill: #64748b;
+  font-size: 11px;
+  font-family: var(--font-mono);
+}
+
+.vector-arrow {
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+.vector-similarity-arc {
+  fill: none;
+  stroke: #f59e0b;
+  stroke-width: 2;
+  stroke-dasharray: 3, 2;
+}

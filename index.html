@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI for Java Developers: Zero to Hero | Complete Generative AI Curriculum</title>
+  <meta name="description" content="The definitive Generative AI educational platform for Java Developers. Covers Tokens, Embeddings, RAG, Tool Calling, Autonomous Agents, 140+ Spring AI code examples, and 100-question interview mastery from 0 to 15+ YOE.">
+  <meta name="keywords" content="Java, Spring AI, LangChain4j, Generative AI, RAG, Vector Database, PgVector, Tool Calling, Autonomous Agents, LLM, OpenAI, Ollama">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI for Java Developers: Zero to Hero">
+  <meta property="og:description" content="Master Generative AI, RAG, Vectors, and Autonomous Agents with 140+ production Java examples and 0-to-15 YOE Interview prep.">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/diagrams.css">
+</head>
+<body>
+
+  <div class="app-layout">
+    <!-- Header -->
+    <header class="app-header">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <button id="mobile-menu-btn" class="btn-icon" style="display: none;" aria-label="Toggle navigation">
+          ☰
+        </button>
+        <a href="#all-topics" class="header-brand">
+          <div class="brand-icon">☕⚡</div>
+          <div class="brand-title">
+            <span class="brand-title-main">AI for Java Developers</span>
+            <span class="brand-title-sub">Zero to Hero Platform</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="header-search">
+        <div class="search-input-wrapper">
+          <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+          <input type="text" id="global-search-input" class="search-input" placeholder="Search topics, 140+ Java examples, or interview questions...">
+          <span class="search-kbd">Ctrl+K</span>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="header-actions">
+        <span class="badge-pill gh-pages" title="100% Framework-Free. Deployable to GitHub Pages.">
+          <span>●</span> GitHub Pages Ready
+        </span>
+
+        <button id="theme-toggle-btn" class="btn-icon" title="Toggle Theme" aria-label="Toggle Theme">
+          <span id="theme-toggle-icon">☀️</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-wrapper">
+      <!-- Mobile Backdrop -->
+      <div id="sidebar-backdrop" class="sidebar-backdrop" style="display: none;"></div>
+
+      <!-- Sidebar -->
+      <aside id="app-sidebar" class="app-sidebar">
+        <!-- Progress Tracker Widget -->
+        <div class="learning-progress-card">
+          <div class="progress-header">
+            <span>Learning Journey</span>
+            <span id="sidebar-progress-text" style="color: var(--accent-ai); font-family: var(--font-mono);">0 / 7 Mastered</span>
+          </div>
+          <div class="progress-bar-container">
+            <div id="sidebar-progress-fill" class="progress-bar-fill" style="width: 0%;"></div>
+          </div>
+          <div class="progress-stats">
+            <span>Goal: 100% Confidence</span>
+            <span>Zero to Hero</span>
+          </div>
+        </div>
+
+        <!-- Curriculum Navigation -->
+        <div class="sidebar-section">
+          <div class="sidebar-title">
+            <span>Curriculum Modules</span>
+            <span>7 Topics</span>
+          </div>
+          <ul class="sidebar-nav-list">
+            <li class="sidebar-nav-item active">
+              <a href="#all-topics">
+                <span class="nav-num">00</span>
+                <span>All Modules Overview</span>
+              </a>
+            </li>
+            <li class="sidebar-nav-item">
+              <a href="#topic/genai-foundations">
+                <span class="nav-num">01</span>
+                <span>GenAI Foundations</span>
+                <span class="nav-badge">20 Ex</span>
+              </a>
+            </li>
+            <li class="sidebar-nav-item">
+              <a href="#topic/embeddings-and-vectors">
+                <span class="nav-num">02</span>
+                <span>Embeddings &amp; Vectors</span>
+                <span class="nav-badge">20 Ex</span>
+              </a>
+            </li>
+            <li class="sidebar-nav-item">
+              <a href="#topic/rag-architecture">
+                <span class="nav-num">03</span>
+                <span>RAG Architecture</span>
+                <span class="nav-badge">20 Ex</span>
+              </a>
+            </li>
+            <li class="sidebar-nav-item">
+              <a href="#topic/prompt-engineering-structured-output">
+                <span class="nav-num">04</span>
+                <span>Prompts &amp; Structured JSON</span>
+                <span class="nav-badge">20 Ex</span>
+              </a>
+            </li>
+            <li class="sidebar-nav-item">
+              <a href="#topic/tool-calling-and-functions">
+                <span class="nav-num">05</span>
+                <span>Tool Calling &amp; Functions</span>
+                <span class="nav-badge">20 Ex</span>
+              </a>
+            </li>
+            <li class="sidebar-nav-item">
+              <a href="#topic/autonomous-agents-react">
+                <span class="nav-num">06</span>
+                <span>Autonomous Agents</span>
+                <span class="nav-badge">20 Ex</span>
+              </a>
+            </li>
+            <li class="sidebar-nav-item">
+              <a href="#topic/enterprise-system-design-production">
+                <span class="nav-num">07</span>
+                <span>System Design (15+ YOE)</span>
+                <span class="nav-badge">20 Ex</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mastery & Interview Section -->
+        <div class="sidebar-section">
+          <div class="sidebar-title">
+            <span>Mastery &amp; Assessment</span>
+          </div>
+          <ul class="sidebar-nav-list">
+            <li class="sidebar-nav-item">
+              <a href="#interview-guide">
+                <span class="nav-num">💼</span>
+                <span>0-15 YOE Interview Guide</span>
+              </a>
+            </li>
+            <li class="sidebar-nav-item">
+              <a href="#quiz-hub">
+                <span class="nav-num">🎯</span>
+                <span>100-Question Assessment</span>
+              </a>
+            </li>
+            <li class="sidebar-nav-item">
+              <a href="#memorization-hub">
+                <span class="nav-num">🧠</span>
+                <span>Memorization &amp; Flashcards</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="app-content">
+        <div id="main-content-view">
+          <!-- Dynamically populated by app.js -->
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <style>
+    @media (max-width: 1024px) {
+      #mobile-menu-btn {
+        display: flex !important;
+      }
+    }
+  </style>
+
+  <!-- Application Scripts -->
+  <script src="assets/js/data/topics.js"></script>
+  <script src="assets/js/data/topics-part2.js"></script>
+  <script src="assets/js/data/interviews.js"></script>
+  <script src="assets/js/data/flashcards.js"></script>
+  <script src="assets/js/data/quiz-data.js"></script>
+  <script src="assets/js/quiz.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
